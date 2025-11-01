@@ -7,9 +7,11 @@ from telegram.ext import (
 )
 import asyncio, random, datetime, json, os
 
-# 🔒 TOKEN ва ADMIN_IDS аз муҳити Render гирифта мешаванд
-TOKEN = os.getenv("TOKEN")
-ADMIN_IDS = list(map(int, os.getenv("ADMIN_IDS", "").split(",")))
+# 🔒 TOKEN-и худро гузоред
+TOKEN = "8238563485:AAHNLTZodPeXcl7YfjZqIqY6BpcPuP3QGXs"
+
+# 👑 ID-и админ
+ADMIN_IDS = [8377215874]
 
 # 📦 Маҳсулот
 ITEMS = {
@@ -105,7 +107,7 @@ async def show_main_menu(chat, user_id):
         ],
         [
             InlineKeyboardButton("🛒 Сабад", callback_data="open_cart"),
-            InlineKeyboardButton("💬 Профили админ", url=f"tg://user?id={ADMIN_IDS[0]}"),
+            InlineKeyboardButton("💬 Профили админ", url="tg://user?id=8377215874"),
         ],
         [InlineKeyboardButton("ℹ Маълумот", callback_data="info")],
     ]
